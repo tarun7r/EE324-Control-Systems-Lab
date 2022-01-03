@@ -1,0 +1,11 @@
+z = poly(0 , 'z') ;
+H1 = 1/ z ;
+s = tf2ss(H1) ;
+var = ones(1, 10);
+val = dsimul (s, var);
+scf ( ) ;
+plot(val) ;
+set (gca ( ) ,"data_bounds " , [ 0 ,0 ;15,2 ] ) ;
+xlabel( 't' , 'fontsize', 2.5 ) ;
+ylabel( 'Resopnse at n' , 'fontsize', 2.5 ) ;
+title ( [ "discrete time response plot" ] , 'fontsize', 2 ) ;
